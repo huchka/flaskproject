@@ -1,0 +1,22 @@
+POST http://localhost:5000/note/
+Content-Type: application/json
+
+{
+    "title": "title3",
+    "content": "content3"
+}
+
+###
+
+
+GET http://localhost:5000/note/1/
+Accept: application/json
+
+
+###
+
+GET http://localhost:5000/note/
+Accept: application/json
+
+
+###

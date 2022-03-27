@@ -1,0 +1,18 @@
+version: "3.4"
+
+services:
+
+    flask:
+        hostname: flask
+        build:
+            context: ./
+            dockerfile: ./Dockerfile
+        ports:
+            - 5000:5000
+        volumes:
+            - ./:/code
+        command: bash -c "flask db upgrade ; python app.py"
+        restart: always
+        stop_grace_period: 1s
+        environment:
+            - FLASK_ENV=development
