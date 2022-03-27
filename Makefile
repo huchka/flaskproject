@@ -13,4 +13,4 @@ push:
 	docker push ${DOCKER_IMAGE_GCR_URI}
 
 deploy:
-	gcloud run deploy ${CLOUD_RUN_SERVICE_NAME} --region asia-northeast1 --image=${DOCKER_IMAGE_GCR_URI}
+	gcloud run deploy ${CLOUD_RUN_SERVICE_NAME} --region asia-northeast1 --project ${PROJECT_ID} --image=${DOCKER_IMAGE_GCR_URI}
