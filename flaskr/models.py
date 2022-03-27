@@ -1,4 +1,4 @@
-from flaskr import db, ma
+from flaskr import db
 
 
 class NoteModel(db.Model):
